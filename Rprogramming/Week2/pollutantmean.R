@@ -20,6 +20,7 @@ pollutantmean <- function (directory, pollutant, id = 1:332) {
         
        ## initialize the final dataset from which the mean is calculated
         y_total <- matrix (0, nrow = 0, ncol=3)
+        x <- c()
        
         ## create a character vector of csv files to read 
         for (l in 1:length(id)) {
