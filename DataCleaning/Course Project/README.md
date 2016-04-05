@@ -46,8 +46,8 @@
 
 |S/N	| VARIABLE	           |	DECRIPTION		          	            |
 |-----|---------------------|-------------------------------------------|
-|1	| f_train	           |Filenames of train text files		      
-|	|		           |	Character vector                     |       |	|		           |	Length = 3                      |       |2	| dl_train	           |Train data (subject id, training set and   |                                                                                               |	|	                 | 	training	labels) 			   |  
+|1	| f_train	           |Filenames of train text files		   |   
+|	|		           |	Character vector                     |       |	|		           |	Length = 3                      	   |       |2	| dl_train	           |Train data (subject id, training set and   |                                                                                               |	|	                 | 	training	labels) 			   |  
 |	|		           |	List of 3 (data frame) elements       |
 |3	|f_test	           |Filenames of test  text files              |     
 |	|		           |	Character vector                      | 
