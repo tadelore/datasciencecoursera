@@ -64,7 +64,7 @@ newdata <- aggregate(mergedData[,2:562], list(mergedData$Subject_test, mergedDat
 #save newdata as a text file
 write.table(newdata, file = paste(getwd(), "/Course Project/newdata_step5.txt",
                                               sep = ""), row.names = FALSE)
-
+#remove all outputs except newdata 
 rm(f_train,dl_train,f_test,dl_test,mergedData, rd_mergedData,
                 mean_mergedData,std_mergedData,features)
 
