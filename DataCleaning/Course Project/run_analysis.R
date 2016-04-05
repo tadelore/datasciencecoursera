@@ -15,7 +15,7 @@ f_train <- file.path(paste(getwd(),"/UCI HAR Dataset/train", sep = ""),
 dl_train <- lapply(f_train, read.table)
 
 #view train dataset
-str(dl_train)
+#str(dl_train)
 
 #Then create object with file names with other datsets in test folder
 f_test <- file.path(paste(getwd(),"/UCI HAR Dataset/test", sep = ""), 
@@ -25,7 +25,7 @@ f_test <- file.path(paste(getwd(),"/UCI HAR Dataset/test", sep = ""),
 dl_test <- lapply(f_test, read.table)
 
 #view train dataset
-str(dl_test)
+#str(dl_test)
 
 #merge training and test sets to creat one datset
 mergedData <- merge.list(dl_train, dl_test)
@@ -40,7 +40,7 @@ features <- read.table(paste(getwd(),"/UCI HAR Dataset/features.txt", sep = ""))
 names(mergedData) <- c("Subject_test", as.character(features[,2]), "Activity")
 
 #view names
-head(names(mergedData))
+#head(names(mergedData))
 
 #replace Activity variable values with descriptives
 mergedData$Activity <- as.character(mergedData$Activity)
@@ -49,7 +49,7 @@ mergedData$Activity <- revalue(mergedData$Activity, c("1" = "WALKING", "2" = "WA
                                                       "5" = "STANDING", "6" = "LAYING"))
 
 #view Activity variable 
-head((mergedData$Activity))
+#head((mergedData$Activity))
 
 #remove duplicate column names 
 rd_mergedData <- mergedData[,!duplicated(colnames(mergedData))]
@@ -65,5 +65,7 @@ newdata <- aggregate(mergedData[,2:562], list(mergedData$Subject_test, mergedDat
 write.table(newdata, file = paste(getwd(), "/Course Project/newdata_step5.txt",
                                               sep = ""), row.names = FALSE)
 
+rm(f_train,dl_train,f_test,dl_test,mergedData, rd_mergedData,
+                mean_mergedData,std_mergedData,features)
 
                          
