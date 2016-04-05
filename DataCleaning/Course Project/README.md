@@ -38,37 +38,41 @@
 
 
 
+
+
+
+
 ####CODE BOOK
 
 |S/N	| VARIABLE	           |	DECRIPTION		          	            |
-|-----|---------------------|----------------------------------------------|
-|1	| f_train	           |Filenames of train text files		      | 
-|	|		           |	Character vector                        |       |	|		           |	Length = 3                              |       |2	| dl_train	           |Train data (subject id, training set and     |                                                                                               |	|	                 | 	training	labels) 			      |  
-|	|		           |	List of 3 (data frame) elements         |
-|3	|f_test	           |Filenames of test  text files                |     
-|	|		           |	Character vector                        | 
-|	|		           |	Length = 3                              |
-|4	|dl_test	           |Test data (subject id, training set and      |                   
-|	|		           |	training labels)                        |
-|	|		           |	List of 3 (data frame) elements         |   
-|5	|mergedData           |Merged train and test datasets                | 
-|	|		           |	Data frame                              | 
-|	|		           |	7352 observations of 563 variables      | 
-|6	|mergedData$Activity  |Activity variable in mergedData               | 
-|	|                     |	Character vector                        |
-|7	|rd_mergedData	     |Remove duplicate column names in mergedData   |
-|	|			     |	Data frame                              |              
-|	|			     |	7352 observations of 479 variables      |  
-|8	|mean_mergeData	     |All variables with name containing “mean”     | 
-|	|                     |	Data frame                              | 
-|	|                     |	7352 observations of 53 variables       |  
-|9	|std_mergeData	     |All variables with name containing “std”      | 
-|	|                     |	Data frame                              |       
-|	|		           |	7352 observations of 33 variables       |  
-|10	|newdata	  	     |Average of all variables by subject id and   |                                                      
-|     |                     |	activity                                |
-|	|	      	     |	126 observations of 563 variables       |
-|-----|-------------------------------------------------------------------| 
+|-----|---------------------|-------------------------------------------|
+|1	| f_train	           |Filenames of train text files		      
+|	|		           |	Character vector                     |       |	|		           |	Length = 3                      |       |2	| dl_train	           |Train data (subject id, training set and   |                                                                                               |	|	                 | 	training	labels) 			   |  
+|	|		           |	List of 3 (data frame) elements       |
+|3	|f_test	           |Filenames of test  text files              |     
+|	|		           |	Character vector                      | 
+|	|		           |	Length = 3                            |
+|4	|dl_test	           |Test data (subject id, training set and    |                   
+|	|		           |	training labels)                      |
+|	|		           |	List of 3 (data frame) elements       |   
+|5	|mergedData           |Merged train and test datasets             | 
+|	|		           |	Data frame                            | 
+|	|		           |	7352 observations of 563 variables    | 
+|6	|mergedData$Activity  |Activity variable in mergedData            | 
+|	|                     |	Character vector                     |
+|7	|rd_mergedData	     |Remove duplicate column names in mergedData|
+|	|			     |	Data frame                            |              
+|	|			     |	7352 observations of 479 variables    |  
+|8	|mean_mergeData	     |All variables with name containing “mean”  | 
+|	|                     |	Data frame                            | 
+|	|                     |	7352 observations of 53 variables     |  
+|9	|std_mergeData	     |All variables with name containing “std”   | 
+|	|                     |	Data frame                            |       
+|	|		           |	7352 observations of 33 variables     |  
+|10	|newdata	  	     |Average of all variables by subject id and |                                                      
+|     |                     |	activity                              |
+|	|	      	     |	126 observations of 563 variables     |
+|-----|-----------------------------------------------------------------| 
 
 
 
