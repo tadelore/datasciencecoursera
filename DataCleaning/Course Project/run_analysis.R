@@ -27,7 +27,6 @@ dl_test <- lapply(f_test, read.table)
 #view train dataset
 #str(dl_test)
 
-
 #merge training and test sets to creat one datset
 mergedData <- merge.list(dl_train, dl_test)
 

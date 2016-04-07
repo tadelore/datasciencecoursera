@@ -14,9 +14,10 @@ The following variables were calculated in cleaning up the data:
 |S/N	| VARIABLE	           |	DECRIPTION		          	         |
 |-----|---------------------|-------------------------------------------|
 |1	| f_train	           |Filenames of train text files		   |   
-|	|		           |	Character vector                     |       |	|		           |	Length = 3                        	   |2	| dl_train	           |Train data (subject id, training set and   |                                                                                               |	|	                 | 	training	labels) 			   |  
+|	|		           |	Character vector                     | |	|                     |	Length = 3                        	   | 
+|2	| dl_train	           |Train data (subject id, training set and   |                                                                                               |	|	                 | 	training	labels) 			   |  
 |	|		           |	List of 3 (data frame) elements       |
-|3	|f_test	           |Filenames of test  text files              |     
+|3	|f_test	           |Filenames of test text files              |     
 |	|		           |	Character vector                      | 
 |	|		           |	Length = 3                            |
 |4	|dl_test	           |Test data (subject id, training set and    |                   
@@ -39,7 +40,6 @@ The following variables were calculated in cleaning up the data:
 |10	|mergedData_mean_std  |All variables with name containing “mean”  | |     |                     |	and “std”                             |    
 |     |                     |	Data frame 					   |
 |     |                     |	7352 observations with 86 variables   |
-|11   |newdata	  	     |Average of all mean and standard deviation |      |     |                     |	(std) variables by subject id and     |                                                      
-|     |                     |	activity                              |
+|11   |newdata	  	     |Average of all mean and standard deviation |      |     |                     |	variables by subjected & activity     |                                                      
 |	|	      	     |	Data frame                            |    |     |                     |     126 observations of 88 variables      |
 |-----|-----------------------------------------------------------------| 
