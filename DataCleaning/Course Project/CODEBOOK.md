@@ -42,5 +42,4 @@ The following variables were calculated in cleaning up the data:
 |     |                     |	7352 observations with 86 variables   |
 |11   |newdata	  	     |Average of all mean and standard deviation |      |     |                     |	variables by subjected & activity     |                                                      
 |	|	      	     |	Data frame                            |    |     |                     |     126 observations of 88 variables      |
-
-
+|-----|---------------------|-------------------------------------------|
