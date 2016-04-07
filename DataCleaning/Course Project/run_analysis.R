@@ -27,6 +27,7 @@ dl_test <- lapply(f_test, read.table)
 #view train dataset
 #str(dl_test)
 
+
 #merge training and test sets to creat one datset
 mergedData <- merge.list(dl_train, dl_test)
 
@@ -58,8 +59,19 @@ rd_mergedData <- mergedData[,!duplicated(colnames(mergedData))]
 mean_mergedData <- select(rd_mergedData, contains("mean"))
 std_mergedData <- select(rd_mergedData, contains("std"))
 
-#create a dataset with the average of each variable for each activity and each subject
-newdata <- aggregate(mergedData[,2:562], list(mergedData$Subject_test, mergedData$Activity), mean)
+mergedData_mean_std <- cbind(mean_mergedData, std_mergedData)
+
+#appropriately label merged dataset with descriptive names 
+names(mergedData_mean_std) <- gsub("^t", "time", names(mergedData_mean_std))
+names(mergedData_mean_std) <- gsub("^f", "freq", names(mergedData_mean_std))
+names(mergedData_mean_std) <- gsub("std", "standard_deviation", names(mergedData_mean_std))
+names(mergedData_mean_std) <- gsub("Mag", "Magnitude", names(mergedData_mean_std))
+names(mergedData_mean_std) <- gsub("Acc", "Accelerometer", names(mergedData_mean_std))
+names(mergedData_mean_std) <- gsub("Gyro", "Gyroscope", names(mergedData_mean_std))
+
+#create a dataset with the average of each variable for each subject and each activity 
+newdata <- aggregate(mergedData_mean_std, 
+                     list(mergedData$Subject_test, mergedData$Activity), mean)
 
 #save newdata as a text file
 write.table(newdata, file = paste(getwd(), "/Course Project/newdata_step5.txt",
