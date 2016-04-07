@@ -6,7 +6,7 @@ The variables for each record in the (independent) tidy data set includes:
 1. An identifier of the subject who carried out the experiment 
 2. Mean of all time and frequency domain variables
 3. Standard deviation (std) of all time and frequency domain variables
-4. Activity labels of the time and frequency domain (mean and std) variables 
+4. Activity labels of all time and frequency domain (mean and std) variables 
 
 
 The following variables were calculated in cleaning up the data: 
@@ -42,4 +42,5 @@ The following variables were calculated in cleaning up the data:
 |     |                     |	7352 observations with 86 variables   |
 |11   |newdata	  	     |Average of all mean and standard deviation |      |     |                     |	variables by subjected & activity     |                                                      
 |	|	      	     |	Data frame                            |    |     |                     |     126 observations of 88 variables      |
-|-----|-----------------------------------------------------------------| 
+
+
